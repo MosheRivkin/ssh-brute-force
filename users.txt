@@ -1,0 +1,8 @@
+admin
+user
+moshe
+israel
+superuser
+junior
+script_kiddie
+
